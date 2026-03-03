@@ -10,8 +10,22 @@ import CTASection from "@/components/CTASection";
 import EcosystemSection from "@/components/EcosystemSection";
 import PerformanceSection from "@/components/PerformanceSection";
 import Footer from "@/components/Footer";
+import { useEffect } from "react";
 
 const Index = () => {
+  useEffect(() => {
+    // Handle hash-based scrolling
+    const hash = window.location.hash;
+    if (hash) {
+      const id = hash.replace("#", "");
+      const element = document.getElementById(id);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: "smooth" });
+        }, 100);
+      }
+    }
+  }, []);
   return (
     <div className="min-h-screen bg-background overflow-x-hidden">
       <Navbar />
@@ -21,9 +35,13 @@ const Index = () => {
       <PerformanceSection />
       <CommandCenterSection />
       <EcosystemSection />
-      <FeaturesGrid />
+      <div id="features">
+        <FeaturesGrid />
+      </div>
       <TestimonialSection />
-      <PricingSection />
+      <div id="pricing">
+        <PricingSection />
+      </div>
       <CTASection />
       <Footer />
     </div>

@@ -8,13 +8,12 @@ const Navbar = () => {
           <img src="/logo.png" alt="NeuralCore" className="h-20 w-auto" />
         </Link>
         <div className="hidden md:flex items-center gap-8">
-          <Link to="/dcsyncai" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200">DCSyncAI X.1</Link>
           <a href="/#features" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200">Features</a>
           <a href="/#pricing" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200">Pricing</a>
           <Link to="/contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200">Contact</Link>
         </div>
-        <Link to="/contact" className="hidden sm:block px-5 py-2 rounded-lg text-sm font-heading font-medium bg-gradient-accent text-primary-foreground glow-shadow-sm transition-all duration-300 hover:scale-[1.02]">
-          Get Access
+        <Link to="/dcsyncai" className="hidden sm:block px-5 py-2 rounded-lg text-sm font-heading font-medium bg-gradient-accent text-primary-foreground glow-shadow-sm transition-all duration-300 hover:scale-[1.02]">
+          DCSyncAI X.1
         </Link>
       </div>
     </nav>

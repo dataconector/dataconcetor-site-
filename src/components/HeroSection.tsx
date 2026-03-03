@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { Shield, Zap, ArrowRight, MousePointer2 } from "lucide-react";
 
 const HeroSection = () => {
@@ -132,9 +133,9 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
         >
-          <a href="#demo" className="hd-btn !mb-0 px-4 py-1.5 text-sm flex items-center gap-2 shadow-2xl shadow-accent/20">
+          <Link to="/dcsyncai" className="hd-btn !mb-0 px-4 py-1.5 text-sm flex items-center gap-2 shadow-2xl shadow-accent/20">
             Start Deploying
-          </a>
+          </Link>
           <a href="#features" className="px-6 py-2.5 rounded-full font-heading font-semibold glass border border-white/10 text-foreground transition-all hover:bg-white/5 text-sm flex items-center gap-2">
             View Ecosystem <MousePointer2 className="w-4 h-4" />
           </a>
